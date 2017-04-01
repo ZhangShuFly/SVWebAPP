@@ -13,7 +13,7 @@
 
   </head>
   <body>
-    <div class="page-group">
+    <div class="page-group" id="pageGroup">
         <div class="page page-current">
         <!-- 你的html代码 -->
         </div>
@@ -21,5 +21,25 @@
 
 	<script type='text/javascript' src='./dist/js/zepto.js' charset='utf-8'></script>
 	<script type='text/javascript' src='./dist/js/sm.js' charset='utf-8'></script>
+ 	<script type='text/javascript' src="./dist/js/vue/vue.min.js"></script>
+	<script type='text/javascript' src="./dist/js/vue/vue-resource.min.js"></script>
+  	<script type="text/javascript">
+	var testVue = new Vue({
+	    el:'#pageGroup',
+	    data: {
+	    	message:{}, 
+	    	result:{}
+	    },
+		methods: {
+			getCars:function(){
+				this.$http.post(url, {message:this.message}).then(function(response) {
+					this.result = response.body;
+	            }, function(response) {
+	            
+	            });
+			}
+		}
+	});
+	</script>
   </body>
 </html>

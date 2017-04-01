@@ -199,12 +199,12 @@
 					<article>
 						<h3>关于我</h3>
 						<section>
-							<p>ZhangShu,Love code,Love family!</p>
+							<p>{{msg.aboutMe}}</p>
 						</section>
 						
 						<h3>联系我</h3>
 						<section>
-							<p>github: <a href="https://github.com/ZhangShuFly">https://github.com/ZhangShuFly</a></p>
+							<p>github: <a href='https://github.com/ZhangShuFly'>https://github.com/ZhangShuFly</a></p>
 						</section>
 						
 					</article>
@@ -237,8 +237,26 @@
 	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=YG2qOChqGUaaQoPb4kPqst8SnEFAoz1l"></script>
 	<script type='text/javascript' src='./dist/js/common.js' charset='utf-8'></script>
 	<script type='text/javascript' src='./dist/js/index.js' charset='utf-8'></script>
+	<script type='text/javascript' src="./dist/js/vue/vue.min.js"></script>
+	<script type='text/javascript' src="./dist/js/vue/vue-resource.min.js"></script>
 	<script type="text/javascript">
-		
+		var indexVue = new Vue({
+		    el:'.page-group',
+		    data: {
+		    	msg:{aboutMe:"ZhangShu,Love code,Love family!"}, 
+		    	result:{},
+		    	url:"http://www.xxx.com/action"
+		    },
+			methods: {
+				getCars:function(){
+					this.$http.post(url, {message:this.message}).then(function(response) {
+						this.result = response.body;
+		            }, function(response) {
+		            
+		            });
+				}
+			}
+		});
 	</script>
   </body>
 </html>
