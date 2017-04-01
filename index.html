@@ -98,7 +98,7 @@
 				</a>
 			</nav>
 		</div>
-		
+		<!-- 第二个.page-->
 		<div class="page" id="record">
 			<!-- 标题栏 -->
 			<header class="bar bar-nav">
@@ -165,7 +165,7 @@
 				</a>
 			</nav>
 		</div>
-		
+		<!-- 第三个.page-->
 		<div class="page" id="set">
 			<!-- 标题栏 -->
 			<header class="bar bar-nav">
@@ -177,24 +177,24 @@
 			
 			<!-- 这里是页面内容区 -->
 			<div class="content">
-					<div class="content-block">
-				    <div class="list-block media-list">
-					    <ul>
-					      <li>
-					      <a href="#" class="create-actions">
-					        <div class="item-content">
-					          <div class="item-media"><span class="icon icon-clock"></span></div>
-					          <div class="item-inner">
-					            <div class="item-title-row">
-					              <div class="item-title">夜间/白天模式</div>
-					            </div>
-					            <div class="item-subtitle">夜间和白天模式切换</div>
-					          </div>
-					        </div>
-					        </a>
-					      </li>
-					    </ul>
-					  </div>
+				<div class="content-block">
+			    <div class="list-block media-list">
+				    <ul>
+				      <li>
+				      <a href="#" class="create-actions">
+				        <div class="item-content">
+				          <div class="item-media"><span class="icon icon-clock"></span></div>
+				          <div class="item-inner">
+				            <div class="item-title-row">
+				              <div class="item-title">夜间/白天模式</div>
+				            </div>
+				            <div class="item-subtitle">夜间和白天模式切换</div>
+				          </div>
+				        </div>
+				        </a>
+				      </li>
+				    </ul>
+				  </div>
 					  
 					<article>
 						<h3>关于我</h3>
@@ -240,8 +240,8 @@
 	<script type='text/javascript' src="./WebContent/dist/js/vue/vue.min.js"></script>
 	<script type='text/javascript' src="./WebContent/dist/js/vue/vue-resource.min.js"></script>
 	<script type="text/javascript">
-		var indexVue = new Vue({
-		    el:'.page-group',
+		var setVue = new Vue({
+		    el:'#set',
 		    data: {
 		    	msg:{aboutMe:"ZhangShu,Love code,Love family!"}, 
 		    	result:{},
